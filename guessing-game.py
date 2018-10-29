@@ -12,11 +12,16 @@ answer = "dog"
 while True:
     print("I'm thinking of an animal")
     guess = input("What animal am I thinking of? ").lower()
-    if guess.lower() == "quit":
+    if guess.startswith("q"):
         break
 
     if guess == answer:
         print("You guessed correct!")
+        yesOrNo = input("Do you like this animal? Enter 'yes' or 'no' ")
+        if yesOrNo == "yes":
+            print("Glad to hear!")
+        if yesOrNo == "no":
+            print("You should like this animal!")
         break
     elif guess != answer:
         print("Guess again!")
