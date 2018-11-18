@@ -30,9 +30,13 @@ def doLoop():
             num2 = int(input(("Enter the second number: ")))
             result = num1 * num2
         elif cmd == "div":
-            num1 = int(input(("Enter the first number: ")))
-            num2 = int(input(("Enter the second number: ")))
-            result = num1 // num2
+            try: 
+                num1 = int(input(("Enter the first number: ")))
+                num2 = int(input(("Enter the second number: ")))
+                result = num1 // num2
+            except:
+                print("Unable to divide.")
+                continue
         elif cmd == "quit":
             break
         else:
